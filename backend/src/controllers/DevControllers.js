@@ -48,13 +48,7 @@ const getAllDevs = async (req, res) => {
     const allDevs = await Dev.find();
 
     res.status(200).json({
-      status: "success",
-      size: allDevs.length,
-      message: {
-        devs: {
-          allDevs
-        }
-      }
+      allDevs
     });
   } catch (err) {
     res.status(400).json({
