@@ -32,8 +32,7 @@ const postDev = async (req, res) => {
       location
     });
     res.json({
-      status: "sucess",
-      message: dev
+      dev
     });
   } catch (err) {
     res.status(404).json({
