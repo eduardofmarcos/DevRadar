@@ -7,7 +7,7 @@ const index = async (req, res) => {
 
     const { latitude, longitude, techs } = req.query;
     const techsArray = transArray(techs);
-    console.log(techsArray);
+    //console.log(techsArray);
 
     const result = await Dev.find({
       techs: {
@@ -24,15 +24,9 @@ const index = async (req, res) => {
       }
     });
     res.status(200).json({
-      status: "success",
-      size: result.length,
-      message: {
-        devs: {
-          result
-        }
-      }
+      result
     });
-  } catch (error) {
+  } catch (err) {
     res.status(400).json({
       status: "fail",
       message: err
