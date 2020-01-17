@@ -36,7 +36,7 @@ function Main({ navigation }) {
     });
     //console.log(response.data.result);
     setDevs(response.data.result);
-    
+    console.log(devs);
   }
 
   function handleRegionChange(region) {
@@ -75,31 +75,32 @@ function Main({ navigation }) {
         onRegionChangeComplete={handleRegionChange}
         initialRegion={currentRegion}
         style={styles.map}
-      ></MapView>
-
-      {devs.map(dev => (
-        <Marker
-          key={dev._id}
-          coordinate={
-            (dev.location.coordinates[1], dev.location.coordinates[0])
-          }
-        >
-          <Image style={styles.avatar} source={dev.avatar_url} />
-          <Callout
-            onPress={() => {
-              navigation.navigate("Profile", {
-                username_github: dev.github_userName
-              });
+      >
+        {devs.map(dev => (
+          <Marker
+            key={dev._id}
+            coordinate={{
+              latitude: dev.location.coordinates[0],
+              longitude: dev.location.coordinates[1]
             }}
           >
-            <View style={styles.callout}>
-              <Text style={styles.devName}>{dev.name}</Text>
-              <Text style={styles.devBio}>{dev.bio}</Text>
-              <Text style={styles.devTechs}>{dev.techs.join(", ")}</Text>
-            </View>
-          </Callout>
-        </Marker>
-      ))}
+            <Image style={styles.avatar} source={{ uri: dev.avatar_url }} />
+            <Callout
+              onPress={() => {
+                navigation.navigate("Profile", {
+                  username_github: dev.github_userName
+                });
+              }}
+            >
+              <View style={styles.callout}>
+                <Text style={styles.devName}>{dev.name}</Text>
+                <Text style={styles.devBio}>{dev.bio}</Text>
+                <Text style={styles.devTechs}>{dev.techs.join(", ")}</Text>
+              </View>
+            </Callout>
+          </Marker>
+        ))}
+      </MapView>
       <View style={styles.searchForm}>
         <TextInput
           style={styles.searchInput}
