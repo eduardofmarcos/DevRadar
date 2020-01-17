@@ -22,6 +22,7 @@ import api from "./../services/api";
 function Main({ navigation }) {
   const [devs, setDevs] = useState([]);
   const [currentRegion, setCurrentRegion] = useState(0);
+  const [techs, setTechs] = useState("");
 
   async function loadDevs() {
     const { latitude, longitude } = currentRegion;
@@ -31,7 +32,7 @@ function Main({ navigation }) {
       params: {
         latitude,
         longitude,
-        techs: "React"
+        techs
       }
     });
     //console.log(response.data.result);
@@ -108,6 +109,8 @@ function Main({ navigation }) {
           placeholderTextColor="#998"
           autoCapitalize="words"
           autoCorrect={false}
+          value={techs}
+          onChangeText={setTechs}
         ></TextInput>
 
         <TouchableOpacity onPress={loadDevs} style={styles.loadButton}>
