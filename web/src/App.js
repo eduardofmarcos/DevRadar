@@ -27,7 +27,7 @@ function App() {
 
   const addDev = async data => {
     const response = await api.post("/devs", data);
-    setDevs([...devs, response.data.dev]);
+    setDevs([...devs, response.data]);
   };
 
   return (
