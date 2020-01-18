@@ -18,14 +18,21 @@ import MapView, { Marker, Callout } from "react-native-maps";
 import { MaterialIcons } from "@expo/vector-icons";
 
 import api from "./../services/api";
-import { connect, disconnect } from "./../services/sockets";
+import { connect, disconnect, subscribeToNewDevs } from "./../services/sockets";
 
 function Main({ navigation }) {
   const [devs, setDevs] = useState([]);
   const [currentRegion, setCurrentRegion] = useState(0);
   const [techs, setTechs] = useState("");
 
+  useEffect(() => {
+    subscribeToNewDevs(dev => {
+      setDevs([...devs, dev]);
+    });
+  }, [devs]);
+
   function setupWebSockets() {
+    disconnect();
     const { latitude, longitude } = currentRegion;
     connect(latitude, longitude, techs);
   }

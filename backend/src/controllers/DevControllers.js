@@ -1,7 +1,7 @@
 const axios = require("axios");
 const Dev = require("./../models/dev");
 const transArray = require("./../utils/transArray");
-const { findConnections } = require("../websocket");
+const { findConnections, sendMessage } = require("../websocket");
 
 const postDev = async (req, res) => {
   //clients requests
@@ -42,6 +42,8 @@ const postDev = async (req, res) => {
     techsArray
   );
   console.log(sendMessageTo);
+  console.log(dev);
+  sendMessage(sendMessageTo, "new-dev", dev);
 
   return res.json(dev);
 };

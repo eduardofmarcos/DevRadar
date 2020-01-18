@@ -1,10 +1,11 @@
 const socketio = require("socket.io");
 const transArray = require("./utils/transArray");
-const calculate = require("./utils/Calculate.js");
+const calculate = require("./utils/Calculate");
 
 const connections = [];
+let io;
 exports.setupWebsocket = server => {
-  const io = socketio(server);
+  io = socketio(server);
 
   io.on("connection", socket => {
     //console.log(socket.id);
@@ -28,10 +29,14 @@ exports.setupWebsocket = server => {
 exports.findConnections = (coordinates, techs) => {
   return connections.filter(connection => {
     return (
-      getDistanceFromLatLonInKm(coordinates, connection.coordinates) < 10 &&
-      connection.techs.some(item => {
-        techs.includes(item);
-      })
+      calculate(coordinates, connection.coordinates) < 10 &&
+      connection.techs.some(items => techs.includes(items))
     );
+  });
+};
+
+exports.sendMessage = (to, message, data) => {
+  to.forEach(connection => {
+    io.to(connection.id).emit(message, data);
   });
 };

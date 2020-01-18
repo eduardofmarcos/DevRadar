@@ -2,7 +2,7 @@ function deg2rad(deg) {
   return deg * (Math.PI / 180);
 }
 
-modules.exports = function getDistanceFromLatLonInKm(
+module.exports = function getDistanceFromLatLonInKm(
   centerCoordinates,
   pointCoordinates
 ) {
