@@ -2,8 +2,13 @@ const moongoose = require("mongoose");
 const express = require("express");
 const routes = require("./routes");
 const cors = require("cors");
+const http = require("http");
+const { setupWebsocket } = require("./websocket");
 
 const app = express();
+const server = http.Server(app);
+
+setupWebsocket(server);
 
 moongoose
   .connect(
@@ -23,6 +28,6 @@ app.use(express.json());
 
 app.use(routes);
 
-app.listen(4000, () => {
+server.listen(4000, () => {
   console.log("App running on port 4000...");
 });
