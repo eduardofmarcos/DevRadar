@@ -43,13 +43,13 @@ Project made during the Rocket Seat Oministack week where we built a fully proje
 
 #### How to run the project:
 
--backend:
+* backend:
   yarn dev
 
--web 
+* web 
   yarn start
   
--mobile:
+* mobile:
   npm start
   
   ##### Screenshots
