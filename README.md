@@ -4,7 +4,7 @@
 
 #### About this project:
 
-Project made during the Rocket Seat Oministack week where we built a fully project with backend, web and mobile. The project itself has the funcionalities to register the dev by github username (web) and on mobile app it has the function to search by technologies developers near the user (on real time using the socket.io”. Once located we can choose the dev and redirect to the github mobile web page.
+Project made during the Rocket Seat Oministack week where we built a fully project with backend, web and mobile. The project itself has the funcionalities to register the dev by github username (web) and on mobile app it has the function to search by technologies developers near the user (on real time using the socket.io). Once located we can choose the dev and redirect to the github mobile web page.
 
 
 #### Built with:
