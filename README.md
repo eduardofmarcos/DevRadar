@@ -48,5 +48,6 @@ Project made during the Rocket Seat Oministack week where we built a fully proje
 
 -web 
   yarn start
+  
 -mobile:
   npm start
