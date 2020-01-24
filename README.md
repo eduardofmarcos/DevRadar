@@ -9,20 +9,20 @@ Project made during the Rocket Seat Oministack week where we built a fully proje
 
 #### Built with:
 
-* backend:
+* backend (nodeJS):
    "axios": "^0.19.1",
    "cors": "^2.8.5",
    "express": "^4.17.1",
    "mongoose": "^5.8.7",
    "socket.io": "^2.3.0"
 
-* web:
+* web (React):
    "axios": "^0.19.1",
    "react": "^16.12.0",
    "react-dom": "^16.12.0",
    "react-scripts": "3.3.0"
 
-* mobile:
+* mobile (React Native):
    "@react-native-community/masked-view": "^0.1.6",
    "axios": "^0.19.1",
    "expo": "~36.0.0",
