@@ -1,13 +1,13 @@
 ###### OminiStack.10
 
-### Dev Radar App
+# Dev Radar App
 
-#### About this project:
+### About this project:
 
 Project made during the Rocket Seat Oministack week where we built a fully project with backend, web and mobile. The project itself has the funcionalities to register the dev by github username (web) and on mobile app it has the function to search by technologies developers near the user (on real time using the socket.io). Once located we can choose the dev and redirect to the github mobile web page.
 
 
-#### Built with:
+### Built with:
 
 * backend (nodeJS):
    "axios": "^0.19.1",
@@ -41,7 +41,7 @@ Project made during the Rocket Seat Oministack week where we built a fully proje
    "react-navigation-stack": "^2.0.15",
    "socket.io-client": "^2.1.1"
 
-#### How to run the project:
+### How to run the project:
 
 * backend:
   yarn dev
