@@ -1,4 +1,4 @@
-﻿# OminiStack.10
+# OminiStack.10
 
 ####Dev Radar App
 
