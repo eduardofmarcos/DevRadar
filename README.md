@@ -56,7 +56,7 @@ Project made during the Rocket Seat Oministack week where we built a fully proje
 * web  
 ![Captura de Tela_20200124131016](https://user-images.githubusercontent.com/44758312/73097065-0dd89a80-3ec5-11ea-8c82-18e056d783d9.png)
 
-*mobile
+* mobile
 
 ![Screenshot_20200124-131644~2](https://user-images.githubusercontent.com/44758312/73097066-0dd89a80-3ec5-11ea-9920-8ffad12becf3.png)
 ![Screenshot_20200124-131704~2](https://user-images.githubusercontent.com/44758312/73097067-0dd89a80-3ec5-11ea-9482-d5b0e35db9e2.png)
