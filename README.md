@@ -60,6 +60,11 @@ Project made during the Rocket Seat Oministack week where we built a fully proje
 
 * mobile
 
+![Screenshot_20200124-131644~2](https://user-images.githubusercontent.com/44758312/74694140-acf36800-51cd-11ea-89c9-3b60a506b9d9.png)
+![Screenshot_20200124-131704~2](https://user-images.githubusercontent.com/44758312/74694142-aebd2b80-51cd-11ea-8d2e-e6ce2407f11e.png)
+![Screenshot_20200124-131718~2](https://user-images.githubusercontent.com/44758312/74694143-afee5880-51cd-11ea-82eb-f624f8944384.png)
+
+
 ![Screenshot_20200124-131644~2](https://user-images.githubusercontent.com/44758312/73097066-0dd89a80-3ec5-11ea-9920-8ffad12becf3.png)
 ![Screenshot_20200124-131704~2](https://user-images.githubusercontent.com/44758312/73097067-0dd89a80-3ec5-11ea-9482-d5b0e35db9e2.png)
 ![Screenshot_20200124-131718~2](https://user-images.githubusercontent.com/44758312/73097068-0e713100-3ec5-11ea-8a1d-a2752cc21634.png)
